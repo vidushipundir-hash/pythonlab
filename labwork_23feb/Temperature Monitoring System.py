@@ -1,0 +1,17 @@
+# Temperature Monitoring System
+
+temps = [35, 42, 46, 39, 41, 48, 30]
+
+print("Hottest Day:", max(temps))
+print("Coldest Day:", min(temps))
+
+extreme_days = 0
+
+for i in range(len(temps)):
+    if temps[i] > 45:
+        temps[i] = "Heat Alert"
+    elif temps[i] > 40:
+        extreme_days += 1
+
+print("Updated Temperatures:", temps)
+print("Extreme Days (>40°C):", extreme_days)
